@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<ProxyEndpoint name="default">
+  <Description>POSTAL Code API</Description>
+  <PreFlow name="PreFlow">
+    <Request/>
+    <Response/>
+  </PreFlow>
+  <Flows>
+    <Flow name="GET /pincode/{pin}">
+      <Condition>(proxy.pathsuffix MatchesPath &quot;/pincode/{pin}&quot;) and (request.verb = &quot;GET&quot;)</Condition>
+      <Description>Get Area Postoffices against pincode</Description>
+      <Request/>
+      <Response/>
+    </Flow>
+  </Flows>
+  <PostFlow name="PostFlow">
+    <Request/>
+    <Response/>
+  </PostFlow>
+  <HTTPProxyConnection>
+    <BasePath>/pincodeSecureAPI</BasePath>
+    <VirtualHost>default</VirtualHost>
+    <VirtualHost>secure</VirtualHost>
+  </HTTPProxyConnection>
+  <RouteRule name="default">
+    <TargetEndpoint>default</TargetEndpoint>
+  </RouteRule>
+</ProxyEndpoint>

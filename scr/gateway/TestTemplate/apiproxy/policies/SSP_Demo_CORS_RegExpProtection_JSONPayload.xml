@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RegularExpressionProtection async="false" continueOnError="false" enabled="true" name="SSP_Demo_CORS_RegExpProtection_JSONPayload">
+    <DisplayName>SSP_Demo_CORS_RegExpProtection_JSONPayload</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <JSONPayload>
+        <JSONPath>
+            <Expression>$.</Expression>
+            <!-- Sample Patterns -->
+            <!-- SQL Inject -->
+            <Pattern ignoreCase="true">\b(ALTER( +TABLE){1,1}|CREATE( +TABLE| +INDEX| +DB| +DATABASE| +VIEW){1,1}|(DELETE[*\s+]+FROM)|DROP( +TABLE| +INDEX| +DB| +DATABASE){1,1}|TRUNCATE( +TABLE){1,1}|EXEC(UTE){0,1}|INSERT( +INTO){1,1}|MERGE|((SELECT)(\s+[\S,\s]+\s+))(FROM)|(UPDATE)(\s+[\S,\s]+\s)(SET)|UNION\s*( +SELECT){1,1}|UNION\s*( +ALL){1,1})\b</Pattern>
+            <!-- Server side include -->
+            <Pattern ignoreCase="true">\b(config|exec|echo|printenv|include)\b</Pattern>
+            <!-- Java script -->
+            <Pattern ignoreCase="true">&lt;\s*script\b[^>]*>[^&lt;]+&lt;\s*/\s*script\s*></Pattern>
+        </JSONPath>
+    </JSONPayload>
+</RegularExpressionProtection>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SpikeArrest async="false" continueOnError="false" enabled="true" name="API_Common_Spike_Arrest">
+    <DisplayName>API_Common_Spike_Arrest</DisplayName>
+    <Properties/>
+    <Rate ref="spikeArrestLimit">1ps</Rate>
+</SpikeArrest>

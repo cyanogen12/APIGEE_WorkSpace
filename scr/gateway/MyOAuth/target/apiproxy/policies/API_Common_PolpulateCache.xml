@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PopulateCache async="false" continueOnError="false" enabled="true" name="API_Common_PolpulateCache">
+    <DisplayName>API_Common_PolpulateCache</DisplayName>
+    <Properties/>
+    <CacheKey>
+        <Prefix>Cache</Prefix>
+        <KeyFragment>AccessEntity</KeyFragment>
+    </CacheKey>
+    <Scope>Exclusive</Scope>
+    <ExpirySettings>
+        <TimeoutInSec>3600</TimeoutInSec>
+    </ExpirySettings>
+    <Source>accessEntityCacheObject</Source>
+</PopulateCache>

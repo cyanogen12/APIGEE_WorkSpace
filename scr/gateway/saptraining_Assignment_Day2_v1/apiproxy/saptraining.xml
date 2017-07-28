@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="2" name="saptraining">
+    <Basepaths>/saptraining</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1498037328666</CreatedAt>
+    <CreatedBy>vivek.cyanogen12@gmail.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>saptraining</DisplayName>
+    <LastModifiedAt>1499682960145</LastModifiedAt>
+    <LastModifiedBy>vivek.cyanogen12@gmail.com</LastModifiedBy>
+    <Policies>
+        <Policy>API_Common_ReadKVM</Policy>
+        <Policy>API_Common_Spike_Arrest</Policy>
+        <Policy>API_Common_Statistics_Collector</Policy>
+        <Policy>ApiCommonComponent_AssignMessage_SetTargetVariables</Policy>
+        <Policy>ApiCommonComponent_JS_RequestValidation</Policy>
+        <Policy>ApiCommonComponent_Json2Xml</Policy>
+        <Policy>ApiCommonComponent_Logger</Policy>
+        <Policy>ApiCommonComponent_RaiseFault_BadData</Policy>
+        <Policy>ApiCommonComponent_RaiseFault_InsufficientHeader</Policy>
+        <Policy>ApiCommonComponent_RaiseFault_InvalidHttpVerb</Policy>
+        <Policy>ApiCommonComponent_RaiseFault_Throttle</Policy>
+        <Policy>ApiCommonComponent_RaiseFault_UnKnownResource</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://ApiCommonComponent_JS_RequestValidation.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>

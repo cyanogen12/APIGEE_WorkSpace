@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FlowCallout async="false" continueOnError="false" enabled="true" name="shared_common_preflow">
+    <DisplayName>shared_common_preflow</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <SharedFlowBundle>shared_commonpreflow</SharedFlowBundle>
+</FlowCallout>

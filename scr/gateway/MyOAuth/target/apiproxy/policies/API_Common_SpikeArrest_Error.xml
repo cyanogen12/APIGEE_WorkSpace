@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="API_Common_SpikeArrest_Error">
+    <DisplayName>API_Common_SpikeArrest_Error</DisplayName>
+    <Properties/>
+    <Set>
+        <StatusCode>410</StatusCode>
+        <ReasonPhrase>Denied</ReasonPhrase>
+        <Payload contentType="application/json">{"error":"Not Allowed", "errorDesc":"Calls rejected by server. Please check your subscription"}</Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

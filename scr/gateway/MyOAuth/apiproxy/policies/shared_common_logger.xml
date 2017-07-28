@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FlowCallout async="false" continueOnError="false" enabled="true" name="shared_common_logger">
+    <DisplayName>shared_common_logger</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <SharedFlowBundle>shared_logging</SharedFlowBundle>
+</FlowCallout>

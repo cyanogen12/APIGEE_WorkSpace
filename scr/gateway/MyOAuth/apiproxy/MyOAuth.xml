@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="4" name="MyOAuth">
+    <Basepaths>/myoauth</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1496824726190</CreatedAt>
+    <CreatedBy>vivek.cyanogen12@gmail.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>MyOAuth</DisplayName>
+    <LastModifiedAt>1499917902672</LastModifiedAt>
+    <LastModifiedBy>vivek.cyanogen12@gmail.com</LastModifiedBy>
+    <Policies>
+        <Policy>API_Commom_AccessEntity</Policy>
+        <Policy>API_Commom_RaiseFault_UnknownResource</Policy>
+        <Policy>API_Commomn_StatsCollector</Policy>
+        <Policy>API_Common_AE_2_JSON</Policy>
+        <Policy>API_Common_LookupCache</Policy>
+        <Policy>API_Common_PolpulateCache</Policy>
+        <Policy>API_Common_Quota</Policy>
+        <Policy>API_Common_Quota_Error</Policy>
+        <Policy>API_Common_ReadKVM</Policy>
+        <Policy>API_Common_SpikeArrest</Policy>
+        <Policy>API_Common_SpikeArrest_Error</Policy>
+        <Policy>API_Common_Validate_ClientIP</Policy>
+        <Policy>AccessTokenRefresh</Policy>
+        <Policy>AssignAuthCode</Policy>
+        <Policy>AuthCodeRedirect_OK</Policy>
+        <Policy>OAuth-v20-1</Policy>
+        <Policy>OAuth_GenerateAuthCode</Policy>
+        <Policy>shared_common_logger</Policy>
+        <Policy>shared_common_preflow</Policy>
+        <Policy>shared_common_statistics</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://API_Common_Validate_ClientIP.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>

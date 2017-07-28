@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <FaultRules/>
+    <DefaultFaultRule name="default-fault">
+        <Step>
+            <Name>AssignFaultMessage</Name>
+        </Step>
+        <Step>
+            <Name>StatisticsCollector</Name>
+        </Step>
+        <AlwaysEnforce>true</AlwaysEnforce>
+    </DefaultFaultRule>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>RaiseFault500</Name>
+                <Condition>request.queryparam.500=="true"</Condition>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response>
+            <Step>
+                <Name>StatisticsCollector</Name>
+            </Step>
+        </Response>
+    </PostFlow>
+    <Flows>
+        <Flow name="get">
+            <Request/>
+            <Response>
+                <Step>
+                    <Name>ResponseMashupJS</Name>
+                </Step>
+            </Response>
+            <Condition>request.verb="GET" and proxy.pathsuffix MatchesPath "/get"</Condition>
+        </Flow>
+        <Flow name="send">
+            <Description>send javascript request using send method of JS</Description>
+            <Request/>
+            <Response>
+                <Step>
+                    <Name>ResponsMashupforSend</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/send") and (request.verb = "GET" or request.verb = "GET")</Condition>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/jsmashup1</BasePath>
+        <Properties/>
+        <VirtualHost>default</VirtualHost>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="default">
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>

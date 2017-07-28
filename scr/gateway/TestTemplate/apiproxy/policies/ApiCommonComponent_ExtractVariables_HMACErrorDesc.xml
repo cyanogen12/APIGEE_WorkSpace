@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="ApiCommonComponent_ExtractVariables_HMACErrorDesc">
+    <DisplayName>ApiCommonComponent_ExtractVariables_HMACErrorDesc</DisplayName>
+  	<Source clearPayload="false">HMACResponse</Source>
+    <JSONPayload>
+        <Variable name="HMACErrorDesc">
+            <JSONPath>$.error_description</JSONPath>
+        </Variable>
+    </JSONPayload>
+  <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

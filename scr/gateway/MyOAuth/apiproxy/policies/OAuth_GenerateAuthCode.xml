@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 async="false" continueOnError="false" enabled="true" name="OAuth_GenerateAuthCode">
+    <DisplayName>OAuth_GenerateAuthCode</DisplayName>
+    <Properties/>
+    <ExpiresIn ref="AccessTokenExpirtTime">600000</ExpiresIn>
+    <ClientId>request.queryparam.apikey</ClientId>
+    <ClientSecret>request.queryparam.clientsecret</ClientSecret>
+    <ExternalAuthorization>false</ExternalAuthorization>
+    <Operation>GenerateAuthorizationCode</Operation>
+    <RedirectUri>request.queryparam.redirect_uri</RedirectUri>
+    <GenerateResponse enabled="false">
+        <!--Format>FORM_PARAM</Format-->
+    </GenerateResponse>
+    <ResponseType>request.queryparam.response_type</ResponseType>
+    <ReuseRefreshToken>false</ReuseRefreshToken>
+    <Scope>request.queryparam.scope</Scope>
+    <SupportedGrantTypes/>
+    <Tokens/>
+</OAuthV2>

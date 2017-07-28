@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Variables-1">
+    <DisplayName>Extract Variables-1</DisplayName>
+    <Properties/>
+    <Source>AccessEntity.Access-Entity-1</Source>
+    <XMLPayload>
+        <Variable name="scopeAttribute" type="string">
+            <XPath>/App/Attributes/Attribute[Name='scopeApp']/Value/text()</XPath>
+        </Variable>
+    </XMLPayload>
+</ExtractVariables>

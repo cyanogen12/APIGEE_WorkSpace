@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VerifyAPIKey async="false" continueOnError="false" enabled="true" name="ApiCommonComponent_VerifyAPIKey_VerifyConsumer">
+    <DisplayName>ApiCommonComponent_VerifyAPIKey_VerifyConsumer</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <APIKey ref="request.header.X-AMEX-API-KEY"/>
+</VerifyAPIKey>

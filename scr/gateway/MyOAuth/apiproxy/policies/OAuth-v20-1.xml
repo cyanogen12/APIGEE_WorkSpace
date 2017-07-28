@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 async="false" continueOnError="false" enabled="true" name="OAuth-v20-1">
+    <DisplayName>OAuth v2.0-1</DisplayName>
+    <Properties/>
+    <Attributes/>
+    <ExternalAuthorization>false</ExternalAuthorization>
+    <Operation>GenerateAccessToken</Operation>
+    <ExpiresIn ref="AccessTokenExpirtTime">600000</ExpiresIn>
+    <RefreshTokenExpiresIn ref="RefreshTokenExpiryTime">7000000</RefreshTokenExpiresIn>
+    <Code>request.queryparam.code</Code>
+    <RedirectUri>request.queryparam.redirect_uri</RedirectUri>
+    <GenerateResponse enabled="true">
+        <!--Format>FORM_PARAM</Format-->
+    </GenerateResponse>
+    <ResponseType>request.queryparam.response_type</ResponseType>
+    <ReuseRefreshToken>false</ReuseRefreshToken>
+    <Scope>request.queryparam.scope</Scope>
+    <SupportedGrantTypes>
+        <GrantType>authorization_code</GrantType>
+        <GrantType>client_credentials</GrantType>
+        <GrantType>password</GrantType>
+    </SupportedGrantTypes>
+    <GrantType>request.queryparam.grant_type</GrantType>
+    <Username>request.header.username</Username>
+    <Password>request.header.password</Password>
+    <Tokens/>
+</OAuthV2>

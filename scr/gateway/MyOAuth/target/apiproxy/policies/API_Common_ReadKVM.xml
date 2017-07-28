@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="API_Common_ReadKVM" mapIdentifier="MyOAuthKVM">
+    <DisplayName>API_Common_ReadKVM</DisplayName>
+    <Properties/>
+    <ExclusiveCache>false</ExclusiveCache>
+    <ExpiryTimeInSecs>300</ExpiryTimeInSecs>
+    <Get assignTo="spikeArrestFlag" index="1">
+        <Key>
+            <Parameter>spikeArrestFlag</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="spikeArrestLimit" index="1">
+        <Key>
+            <Parameter>spikeArrestLimit</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="QuotaInterval" index="1">
+        <Key>
+            <Parameter>QuotaInterval</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="QuotaTimeUnit" index="1">
+        <Key>
+            <Parameter>QuotaTimeUnit</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="QuotaAllowCount" index="1">
+        <Key>
+            <Parameter>QuotaAllowCount</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="AccessTokenExpirtTime" index="1">
+        <Key>
+            <Parameter>AccessTokenExpirtTime</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="RefreshTokenExpiryTime" index="1">
+        <Key>
+            <Parameter>RefreshTokenExpiryTime</Parameter>
+        </Key>
+    </Get>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>

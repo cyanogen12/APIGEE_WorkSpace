@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="SSP_Demo_CORS_AssignMessage_RemovePlatformHeaders">
+    <DisplayName>SSP_Demo_CORS_AssignMessage_RemovePlatformHeaders</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Remove>
+        <Headers>
+            <Header name="Authorization"/>
+            <Header name="X-AAAA-API-KEY"/>
+            <Header name="X-Forwarded-For"/>
+        </Headers>
+    </Remove>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

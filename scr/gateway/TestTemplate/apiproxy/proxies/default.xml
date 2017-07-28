@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description>Authorizations_SSP_Demo_09022017_v1</Description>
+    <DefaultFaultRule name="PlatformFaults">
+         <Step>
+            <Name>ApiCommonComponent_AssignMessage_ErrorContent</Name>
+        </Step>
+        <Step>
+            <Name>ApiCommonComponent_RaiseFault_Throttle</Name>
+            <Condition>fault.name = "SpikeArrestViolation"</Condition>
+        </Step>
+        <Step>
+            <Name>ApiCommonComponent_RaiseFault_Unauthorized</Name>
+            <Condition>fault.name = "InvalidApiKey" or fault.name = "InvalidApiKeyForGivenResource" or fault.name = "FailedToResolveAPIKey"</Condition>
+        </Step>
+        <Step>
+            <Name>ApiCommonComponent_ExtractVariables_HMACErrorDesc</Name>
+            <Condition>(HMACResponse.status.code != NULL and HMACResponse.status.code != 200)</Condition>
+        </Step>
+        <Step>
+            <FaultRules/>
+            <Name>ApiCommonComponent_RaiseFault_InvalidMacToken</Name>
+            <Condition>(HMACResponse.status.code != NULL and (HMACResponse.status.code == 400 || HMACResponse.status.code == 401))</Condition>
+        </Step>
+        <Step>
+            <Name>ApiCommonComponent_RaiseFault_BadData</Name>
+            <Condition>fault.name = "ThreatDetected" or jsonattack.failed ="true" or regularexpressionprotection.failed = "true"</Condition>
+        </Step>
+    </DefaultFaultRule>
+    <PreFlow name="PreFlow">
+        <Request>
+        	<Step>
+            	<FaultRules/>
+                <Name>ApiCommonComponent_ExtractVariables_XForwardedFor</Name>
+            </Step>
+            <Step>
+                <FaultRules/>
+                <Name>ApiCommonComponent_RaiseFault_InvalidHttpVerb</Name>
+                <!-- The fault condition for invalid method can be applied as per API requirement -->
+            	<Condition></Condition>
+             </Step>
+            <Step>
+                <FaultRules/>
+                <Name>ApiCommonComponent_RaiseFault_InsufficientHeader</Name>
+                <Condition>(request.header.Authorization == NULL || request.header.Authorization == "")</Condition>
+            </Step>
+            <Step>
+                <FaultRules/>
+                <Name>SSP_Demo_CORS_SpikeArrest_Throttle</Name>
+            </Step>
+            <Step>
+                <FaultRules/>
+                <Name>ApiCommonComponent_VerifyAPIKey_VerifyConsumer</Name>
+            </Step>
+            <Step>
+                <FaultRules/>
+                <Name>ApiCommonComponent_ServiceCallOut_ValidateMacToken</Name>
+            </Step>
+            <Step>
+                <FaultRules/>
+                <Name>SSP_Demo_CORS_RegExpProtection_JSONPayload</Name>
+                <Condition>request.verb="POST" or request.verb="PUT"</Condition>
+            </Step>
+            <Step>
+             	<FaultRules/>
+               	<Name>SSP_Demo_CORS_JSONThreatProtection</Name>
+               	<Condition>request.verb="POST" or request.verb="PUT"</Condition>
+            </Step>
+            <Step>
+                <FaultRules/>
+                <Name>SSP_Demo_CORS_AssignMessage_RemovePlatformHeaders</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <Flows>
+         <Flow name="offers_decide_POST">
+            <Description/>
+            <Request/>
+            <Response/>
+           	 <Condition>(proxy.pathsuffix MatchesPath "/offers/decide") and (request.verb = "POST")</Condition>
+       	</Flow>
+         <Flow name="offers_summary_decide_POST">
+            <Description/>
+            <Request/>
+            <Response/>
+           	 <Condition>(proxy.pathsuffix MatchesPath "/offers/summary/decide") and (request.verb = "POST")</Condition>
+       	</Flow>
+         <Flow name="offers_offer_id_enroll_PUT">
+            <Description/>
+            <Request/>
+            <Response/>
+           	 <Condition>(proxy.pathsuffix MatchesPath "/offers/{offer_id}/enroll") and (request.verb = "PUT")</Condition>
+       	</Flow>
+        <Flow name="UnknownResource">
+            <Description>Unknown Resource</Description>
+            <Request>
+                <Step>
+                     <Name>ApiCommonComponent_RaiseFault_UnKnownResource</Name>
+                </Step>
+            </Request>
+            <Response/>
+    	</Flow>
+	  </Flows>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <PostClientFlow name="PostClientFlow">
+        <Response>
+            <Step>
+                <Name>ApiCommonComponent_SLM_Logger</Name>
+            </Step>
+        </Response>
+    </PostClientFlow>
+    <HTTPProxyConnection>
+        <BasePath>/authorizations/v1/ssp_demo</BasePath>
+        <VirtualHost>gwInternet</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="testmay30">
+        <TargetEndpoint>testmay30</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>

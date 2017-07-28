@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="ApiCommonComponent_RaiseFault_Throttle">
+    <DisplayName>ApiCommonComponent_RaiseFault_Throttle</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+            <StatusCode>429</StatusCode>
+            <Payload contentType="application/json">
+				\{"error_code" :"104290","error_type":"rate_limit_violation","error_description":"Exceeded configured rate limit for the API, please try again later"}
+			</Payload>
+            <ReasonPhrase>Too Many Requests</ReasonPhrase>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="ApiCommonComponent_ExtractVariables_XForwardedFor">
+    <DisplayName>ApiCommonComponent_ExtractVariables_XForwardedFor</DisplayName>
+    <Properties/>
+    <Header name="X-Forwarded-For">
+        <Pattern ignoreCase="true">{XForwardedFor}</Pattern>
+    </Header>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <VariablePrefix>custom</VariablePrefix>
+</ExtractVariables>

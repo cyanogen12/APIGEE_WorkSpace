@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<StatisticsCollector async="false" continueOnError="false" enabled="true" name="API_Common_Statistics_Collector">
+    <DisplayName>API_Common_Statistics_Collector</DisplayName>
+    <Properties/>
+    <Statistics>
+        <Statistic name="ClientIP" ref="client.ip" type="string"/>
+    </Statistics>
+</StatisticsCollector>

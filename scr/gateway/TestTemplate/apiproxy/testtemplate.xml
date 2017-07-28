@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="testtemplate">
+    <Basepaths>/authorizations/v1/ssp_demo</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1495695797699</CreatedAt>
+    <CreatedBy>vivek.cyanogen12@gmail.com</CreatedBy>
+    <Description> </Description>
+    <DisplayName>Authorizations_SSP_Demo_09022017_v1</DisplayName>
+    <LastModifiedAt>1496721700810</LastModifiedAt>
+    <LastModifiedBy>vivek.cyanogen12@gmail.com</LastModifiedBy>
+    <Policies>
+        <Policy>ApiCommonComponent_AssignMessage_ErrorContent</Policy>
+        <Policy>ApiCommonComponent_AssignMessage_SetTargetVariables</Policy>
+        <Policy>ApiCommonComponent_ExtractVariables_HMACErrorDesc</Policy>
+        <Policy>ApiCommonComponent_ExtractVariables_XForwardedFor</Policy>
+        <Policy>ApiCommonComponent_RaiseFault_BadData</Policy>
+        <Policy>ApiCommonComponent_RaiseFault_GatewayTimeout</Policy>
+        <Policy>ApiCommonComponent_RaiseFault_InsufficientHeader</Policy>
+        <Policy>ApiCommonComponent_RaiseFault_InvalidHttpVerb</Policy>
+        <Policy>ApiCommonComponent_RaiseFault_InvalidMacToken</Policy>
+        <Policy>ApiCommonComponent_RaiseFault_ServiceUnavailable</Policy>
+        <Policy>ApiCommonComponent_RaiseFault_Throttle</Policy>
+        <Policy>ApiCommonComponent_RaiseFault_UnKnownResource</Policy>
+        <Policy>ApiCommonComponent_RaiseFault_Unauthorized</Policy>
+        <Policy>ApiCommonComponent_SLM_Logger</Policy>
+        <Policy>ApiCommonComponent_ServiceCallOut_ValidateMacToken</Policy>
+        <Policy>ApiCommonComponent_VerifyAPIKey_VerifyConsumer</Policy>
+        <Policy>SSP_Demo_CORS_AssignMessage_RemovePlatformHeaders</Policy>
+        <Policy>SSP_Demo_CORS_JSONThreatProtection</Policy>
+        <Policy>SSP_Demo_CORS_RegExpProtection_JSONPayload</Policy>
+        <Policy>SSP_Demo_CORS_SpikeArrest_Throttle</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>testmay30</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>

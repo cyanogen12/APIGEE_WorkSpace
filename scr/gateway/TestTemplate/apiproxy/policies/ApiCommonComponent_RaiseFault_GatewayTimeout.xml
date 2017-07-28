@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="ApiCommonComponent_RaiseFault_GatewayTimeout">
+    <DisplayName>ApiCommonComponent_RaiseFault_GatewayTimeout</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+            <Payload contentType="application/json">
+            	\{"error_code":"105040","error_type":"connection_timeout","error_description":"API connection timeout occurred"}
+            </Payload>
+            <StatusCode>504</StatusCode>
+            <ReasonPhrase>Gateway Timeout</ReasonPhrase>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

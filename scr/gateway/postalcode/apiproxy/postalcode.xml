@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="postalcode">
+    <Basepaths>/postalcode</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1495775900680</CreatedAt>
+    <CreatedBy>vivek.cyanogen12@gmail.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>postalcode</DisplayName>
+    <LastModifiedAt>1496331424577</LastModifiedAt>
+    <LastModifiedBy>vivek.cyanogen12@gmail.com</LastModifiedBy>
+    <Policies>
+        <Policy>InvalidRequest</Policy>
+        <Policy>JSON-to-XML-1</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>

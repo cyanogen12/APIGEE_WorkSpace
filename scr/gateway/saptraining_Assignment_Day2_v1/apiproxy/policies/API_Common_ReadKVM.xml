@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="API_Common_ReadKVM" mapIdentifier="SapTrainingKVM">
+    <DisplayName>API_Common_ReadKVM</DisplayName>
+    <Properties/>
+    <ExclusiveCache>false</ExclusiveCache>
+    <ExpiryTimeInSecs>300</ExpiryTimeInSecs>
+    <Get assignTo="spikeArrestFlag" index="1">
+        <Key>
+            <Parameter>spikeArrestEnabledFlag</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="spikeArrestLimit" index="1">
+        <Key>
+            <Parameter>SpikeArrest</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="AllowedVerbs">
+        <Key>
+            <Parameter>AllowedVerbs</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="AllowedHeaders">
+        <Key>
+            <Parameter>AllowedHeaders</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="MaxHeaderSize" index="1">
+        <Key>
+            <Parameter>MaxHeaderSize</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="MaxPayloadSize" index="1">
+        <Key>
+            <Parameter>MaxPayloadSize</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="MaxRequestUrlSize" index="1">
+        <Key>
+            <Parameter>MaxRequestUrlSize</Parameter>
+        </Key>
+    </Get>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>

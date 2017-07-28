@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="2" name="JSMashup">
+    <Basepaths>/jsmashup</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1496039473443</CreatedAt>
+    <CreatedBy>vivek.cyanogen12@gmail.com</CreatedBy>
+    <Description>vyad23 git revision unknown delvyad2377361</Description>
+    <DisplayName>JSMashup</DisplayName>
+    <LastModifiedAt>1496743450318</LastModifiedAt>
+    <LastModifiedBy>vivek.cyanogen12@gmail.com</LastModifiedBy>
+    <Policies>
+        <Policy>Assign-Message-1</Policy>
+        <Policy>AssignFaultMessage</Policy>
+        <Policy>ChangePathSuffix</Policy>
+        <Policy>RaiseFault500</Policy>
+        <Policy>ReqPinCodesJS</Policy>
+        <Policy>ReqPinCodesUsingSend</Policy>
+        <Policy>ResponsMashupforSend</Policy>
+        <Policy>ResponseCache</Policy>
+        <Policy>ResponseMashupJS</Policy>
+        <Policy>StatisticsCollector</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://ChangePathSuffix.js</Resource>
+        <Resource>jsc://ReqPinCodesUsingSend.js</Resource>
+        <Resource>jsc://ResponseMashupJS.js</Resource>
+        <Resource>jsc://ResponseMashupforSendJS.js</Resource>
+        <Resource>jsc://RewPinCodesJS.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>

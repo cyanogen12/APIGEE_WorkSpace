@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="ApiCommonComponent_RaiseFault_ServiceUnavailable">
+    <DisplayName>ApiCommonComponent_RaiseFault_ServiceUnavailable</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+            <Payload contentType="application/json">
+            	\{"error_code":"105030","error_type":"service_unavailable","error_description":"API is currently not available, please try again later"}
+            </Payload>
+            <StatusCode>503</StatusCode>
+            <ReasonPhrase>Service Unavailable</ReasonPhrase>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

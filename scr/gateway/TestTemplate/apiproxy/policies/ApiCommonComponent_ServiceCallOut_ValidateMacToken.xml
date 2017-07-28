@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="ApiCommonComponent_ServiceCallOut_ValidateMacToken">
+    <DisplayName>ApiCommonComponent_ServiceCallOut_ValidateMacToken</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Request clearPayload="false" variable="myRequest">
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+        <Set>
+            <Verb>POST</Verb>
+            <Headers>
+                <Header name="Authorization">{request.header.Authorization}</Header>
+                <Header name="X-AAAA-API-KEY">{request.header.X-AAAA-API-KEY}</Header>
+            </Headers>
+            <QueryParams>
+                <QueryParam name="requestURI">{message.uri}</QueryParam>
+                <QueryParam name="httpVerb">{request.verb}</QueryParam>
+                <QueryParam name="apiVip">{request.header.Host}</QueryParam>
+                <!-- validateBodyHash is optional, default is false -->
+                <QueryParam name="validateBodyHash">true</QueryParam>
+                <!-- tokenValiditiyInMin is optional, default is 10min -->
+                <QueryParam name="tokenValiditiyInMin">10</QueryParam>
+                <!-- correlationId optional, it will be used for logging -->
+                <QueryParam name="correlationId">{apiproxy.qualifiedname}{messageid}</QueryParam>
+            </QueryParams>
+            <Payload>{request.content}</Payload>
+        </Set>
+    </Request>
+    <Response>HMACResponse</Response>
+    <HTTPTargetConnection>
+        <URL>https://127.0.0.1:9443/apiplatform/validatetoken/v1/hmac</URL>
+        <Properties>
+            <Property name="keepalive.timeout.millis">60000</Property>
+            <Property name="connect.timeout.millis">10000</Property>
+            <Property name="io.timeout.millis">10000</Property>
+            <Property name="supports.http11">true</Property>
+        </Properties>
+    </HTTPTargetConnection>
+</ServiceCallout>

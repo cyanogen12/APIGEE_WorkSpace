@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AssignAuthCode">
+    <DisplayName>AssignAuthCode</DisplayName>
+    <Properties/>
+    <AssignVariable>
+        <Name>AuthCode</Name>
+        <Value/>
+        <Ref>oauthv2authcode.OAuth_GenerateAuthCode.code</Ref>
+    </AssignVariable>
+    <Set>
+        <Payload contentType="application/json">{"AuthCode":"{AuthCode}"}</Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

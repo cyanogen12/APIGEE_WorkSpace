@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><APIProxy name="postalcode" revision="1">
+    <Basepaths>/postalcode</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1495775900680</CreatedAt>
+    <CreatedBy>vivek.cyanogen12@gmail.com</CreatedBy>
+    <Description>vyad23 git revision unknown delvyad2377361</Description>
+    <DisplayName>postalcode</DisplayName>
+    <LastModifiedAt>1496331424577</LastModifiedAt>
+    <LastModifiedBy>vivek.cyanogen12@gmail.com</LastModifiedBy>
+    <Policies>
+        <Policy>InvalidRequest</Policy>
+        <Policy>JSON-to-XML-1</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec/>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>

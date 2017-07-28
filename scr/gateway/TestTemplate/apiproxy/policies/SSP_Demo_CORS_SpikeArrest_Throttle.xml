@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SpikeArrest async="false" continueOnError="false" enabled="true" name="SSP_Demo_CORS_SpikeArrest_Throttle">
+    <DisplayName>SSP_Demo_CORS_SpikeArrest_Throttle</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Rate>756pm</Rate>
+</SpikeArrest>

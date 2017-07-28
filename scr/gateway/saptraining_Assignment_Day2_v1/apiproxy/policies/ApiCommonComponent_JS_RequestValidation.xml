@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="ApiCommonComponent_JS_RequestValidation">
+    <DisplayName>ApiCommonComponent_JS_RequestValidation</DisplayName>
+    <Properties/>
+    <ResourceURL>jsc://ApiCommonComponent_JS_RequestValidation.js</ResourceURL>
+</Javascript>

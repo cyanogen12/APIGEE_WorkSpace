@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<LookupCache async="false" continueOnError="false" enabled="true" name="API_Common_LookupCache">
+    <DisplayName>API_Common_LookupCache</DisplayName>
+    <CacheResource>TESTAPICACHE</CacheResource>
+    <Properties/>
+    <CacheKey>
+        <Prefix>Cache</Prefix>
+        <KeyFragment>AccessEntity</KeyFragment>
+    </CacheKey>
+    <Scope>Exclusive</Scope>
+    <AssignTo>accessEntityCacheObject</AssignTo>
+</LookupCache>
