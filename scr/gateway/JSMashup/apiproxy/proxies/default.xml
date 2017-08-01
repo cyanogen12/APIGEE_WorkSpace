@@ -39,7 +39,7 @@
             <Condition>request.verb="GET" and proxy.pathsuffix MatchesPath "/get"</Condition>
         </Flow>
         <Flow name="send">
-            <Description>send javascript request using send method of JS</Description>
+            <Description>Send request using javascript send method of JS</Description>
             <Request/>
             <Response>
                 <Step>
